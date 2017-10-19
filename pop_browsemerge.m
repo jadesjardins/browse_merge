@@ -53,7 +53,13 @@ try g.useloaded; catch; g.useloaded='off';end
 
 if ischar(g.infname);
     infname=cellstr(g.infname);
+else
+    infname=g.infname;
 end
+infpath=g.infpath;
+outfname=g.outfname;
+outfpath=g.outfpath;
+useloaded=g.useloaded;
 
 n_ALLEEG=length(ALLEEG);
 if n_ALLEEG>0;
