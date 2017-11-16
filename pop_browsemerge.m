@@ -59,13 +59,19 @@ end
 infpath=g.infpath;
 outfname=g.outfname;
 outfpath=g.outfpath;
-useloaded=g.useloaded;
+if strcmp(g.useloaded,'on');
+    useloaded=1;
+else
+    useloaded=0;
+end
 
 n_ALLEEG=length(ALLEEG);
 if n_ALLEEG>0;
     for i=1:n_ALLEEG;
         loadedsets{i}=ALLEEG(i).filename;
     end
+else
+    loadedsets{1}='';
 end
 % pop up window
 % -------------
