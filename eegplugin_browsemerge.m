@@ -1,6 +1,9 @@
 % eegplugin_Import() - Import menu.
 function eegplugin_browsemerge(fig,try_strings,catch_strings)
 
+% start up
+addpath(genpath(fileparts(which('eegplugin_browsemerge.m'))));
+
 
 %--------------------------------------------------------------------------
 % Get File menu handle...
